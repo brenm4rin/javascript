@@ -11,11 +11,11 @@ function datos() {
 datos();
 
 
-function calcularSignoZodiacal(dia,mes){
+function calcularSignoZodiacal(dia, mes) {
 
     if (mes == 1) {
         if (dia >= 21) {
-        alert('Tu signo es Acuario')
+            alert('Tu signo es Acuario')
             return "acuario";
         } else {
             alert('Tu signo es Capricornio')
@@ -124,4 +124,40 @@ function calcularSignoZodiacal(dia,mes){
     return "Fecha no válida";
 }
 
-calcularSignoZodiacal(dia,mes);
+calcularSignoZodiacal(dia, mes);
+
+
+
+// ------------------------------------------- //
+
+
+class Producto {
+    constructor(nombre, precio) {
+        this.nombre = nombre;
+        this.precio = precio;
+        this.cantidad = 10 * 2;
+    }
+
+
+
+    sumarStock(cantidad) {
+        this.cantidad = this.cantidad + cantidad;
+    }
+}
+
+const cursoTarot = new Producto("Curso de Tarot", 90);
+const cursoFeng = new Producto("Curso de Feng-Shui", 100);
+const cursoNumerologia = new Producto("Curso de Numerología", 80);
+const cursoAstrologia = new Producto("Curso de Astrología", 110);
+
+
+
+const carrito = [];
+carrito.push(cursoTarot);
+carrito.push(cursoFeng);
+carrito.push(cursoNumerologia);
+carrito.push(cursoAstrologia);
+
+
+console.log(carrito);
+
